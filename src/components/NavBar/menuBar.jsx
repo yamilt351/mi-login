@@ -1,14 +1,14 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./menuBar.css";
 import logo from "./logo.png";
 import { links, social } from "./data";
+import { Link } from "react-router-dom";
 function MenuBar() {
   const [showLinks, setShowLinks] = useState(false);
 
   return (
-  
-        <nav>
+    <nav>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="logo" alt="logo" />
@@ -30,13 +30,13 @@ function MenuBar() {
               const { id, url, text } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{text}</a>
+                  <Link to={url}>{text}</Link>
                 </li>
               );
             })}
           </ul>
         </div>
-        
+
         <ul className="social-icons">
           {social.map((social) => {
             const { id, url, icon } = social;

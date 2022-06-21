@@ -6,6 +6,11 @@ import {
 } from "react-icons/ai";
 export const links = [
   {
+    id: 0,
+    url: "/",
+    text: "Home",
+  },
+  {
     id: 1,
     url: "/Explore",
     text: "Explore",

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import data from "./promo";
 import "../Footer/footer.css";
+import Footer from '../Footer/Footer'
 function Landing() {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
@@ -23,7 +24,8 @@ function Landing() {
     return () => clearInterval(slider);
   }, [index]);
   return (
-    <section className="section-landing">
+    <>
+   <section className="section-landing">
       <div className="section-center-img">
         {people.map((person, personIndex) => {
           const { id, image } = person;
@@ -53,6 +55,8 @@ function Landing() {
         </button>
       </div>
     </section>
+    <Footer></Footer>
+    </>
   );
 }
 
